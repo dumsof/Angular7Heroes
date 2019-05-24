@@ -1,0 +1,27 @@
+<h1>Héroes <small>Marvel y DC</small></h1>
+<hr/>
+<div class="card-columns">
+    <!--    Esta parte remplaza la parte inferior que esta en comentario,
+            se crea un componente para reutilizar y se envian los parametros con el input,
+            para los heroe y la posicion para la opcion de ver mas 
+    (heroeSeleccionado)="verHeroe($event)": permite emitir un evento desde un componente padre, 
+    que lo pueda recibir el hijo en este caso heroe-tarjeta.componentent.ts y ejecutar en el padre
+    el metodo verHeroe($event), como parametro se pasa el evento y este a su vez se definio que recibe un number
+    que seria el idex o posicion de la tarjeta seleccionada.
+        -->
+    <app-heroe-tarjeta [heroe]="variableHeroe" [index]="posicionSeleccion" (heroeSeleccionado)="verHeroe($event)" *ngFor="let variableHeroe of heroes; let posicionSeleccion= index;">
+
+    </app-heroe-tarjeta>
+
+    <!--  <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let posicionSeleccion= index;">
+        <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
+        <div class="card-body">
+            <h5 class="card-title">{{heroe.nombre}}</h5>
+            <p class="card-text">{{heroe.bio}}</p>
+            <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+            <button type="button" (click)="verHeroe(posicionSeleccion)" class="btn btn-outline-primary btn-block">
+              Ver Mas...
+            </button>
+        </div>
+    </div> -->
+</div>
