@@ -16,7 +16,7 @@ export class HeroeTarjetaComponent implements OnInit {
     -al evento heroeSeleccionado se le esta indicando que se pasa como parametro un valor numeber.
   */
   @Output() heroeSeleccionado: EventEmitter<number>;
-  constructor(private router: Router) { 
+  constructor(private router: Router) {
     /*Se inicializa el escuchador del evento del padre*/
     this.heroeSeleccionado = new EventEmitter();
   }
